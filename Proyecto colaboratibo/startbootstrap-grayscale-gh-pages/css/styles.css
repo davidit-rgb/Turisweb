@@ -11001,6 +11001,7 @@ body {
 #mainNav {
   min-height: 3.5rem;
   background-color: #fff;
+  height: 13%;
 }
 #mainNav .navbar-toggler {
   font-size: 80%;
@@ -11029,6 +11030,86 @@ body {
   width: 130px;
   height: ;
 }
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.navbar-nav {
+  margin: auto;
+  padding: 0.5rem 1.5rem;
+
+  border-radius: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link, .drop-down li {
+  list-style: none;
+  height: 100%;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.drop-down {
+  position: absolute;
+  padding: 0.5rem 0;
+  margin: 0rem -0.4rem;
+  background: antiquewhite;
+  color: black;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  font-size: 12px;
+  display: none;
+}
+
+.nav-link:hover {
+  color: #fff;
+  border-radius: 0.5rem;
+}
+
+.services:hover .drop-down {
+  display: block;
+}
+
+.services a {
+  display: flex;
+  align-items: center;
+}
+
+.services .dropdown-icon {
+  font-size: 18px;
+  position: relative;
+  right: -5px;
+  transform: rotate(0deg);
+  transition: 0.3s ease-in-out all;
+}
+
+.services:hover .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+.drop-down li:hover {
+  background: black;
+  color: #fff;
+  border-radius: 0.5rem;
+}
+.municipio{
+  background-color: #64a19d;
+  color: #fff;
+  border-radius: 12px;
+  padding: 3px 9px;
+  opacity: 0.7;
 @media (min-width: 992px) {
   #mainNav {
     padding-top: 0;
@@ -11038,7 +11119,7 @@ body {
     transition: background-color 0.3s ease-in-out;
   }
   #mainNav .navbar-brand {
-    padding: 0.5rem 0;
+    padding: 3rem 0;
     color: rgba(255, 255, 255, 0.5);
   }
   #mainNav .nav-link {
